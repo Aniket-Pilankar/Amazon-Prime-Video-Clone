@@ -1,2 +1,2 @@
 # Amazon-Prime-Clone
-A Masai UNit 5 project
+A Masai Unit 5 project
