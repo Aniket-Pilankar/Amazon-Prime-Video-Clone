@@ -4,6 +4,7 @@ import { useDispatch,useSelector } from 'react-redux'
 import {recommemdedMovie,horrorMovie} from '../../Redux/RecommendedMovies/action'
 import {FaAngleLeft,FaAngleRight} from 'react-icons/fa';
 // import MiniVideoPlayer from '../MiniVideoPlayer/MiniVideoPlayer';
+import { Link } from 'react-router-dom';
 import './Recommended.css'
 
 
@@ -59,14 +60,17 @@ const Recommended = () => {
     }
 
   return (
-    <div>
+    <div className='Recommended_Div_Component'>
       <h3 className='home-headlines' >Recommended movies</h3>
       <div className='moviesDisplay' ref={ref} >
         <FaAngleLeft className='left-arrow-shadow' onClick={() => {moveLeft(500)}} />
         <FaAngleRight className='right-arrow-shadow' onClick={() => {moveRight(500)}}  />
       {movies.map((e,i) => (
           <div className='IndividualPoster' key={i} >
+            {/* <img src={e.Poster} alt={e.Title} /> */}
+            <Link to={`/movieDetails/${e.imdbID}`}>
             <img src={e.Poster} alt={e.Title} />
+            </Link>
           </div>
           ))}
       </div>

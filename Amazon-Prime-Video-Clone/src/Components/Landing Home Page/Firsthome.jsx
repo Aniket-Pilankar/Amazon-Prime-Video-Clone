@@ -1,18 +1,18 @@
-import { Navbarfirst } from "./Navbarfirst";
-import liongateimg from "./images/LionsgatePlay-426X2946_V1.jpg";
-import discoveryimg from "./images/426x294_Discovery.jpg";
-import erosnow from "./images/Erosnow-426X2948_V1.jpg";
-import hoicimg from "./images/hoichoi-426X2946_V1.jpg";
-import docubay from "./images/Docubay-426X2947_V1.jpg";
-import shortstv from "./images/ShortsTV-426X2944_V1.jpg";
-import mubi from "./images/Mubi-426X2946_V1.jpg";
-import manorama from "./images/426x294_MANORAMAMAX.jpg";
-import hayu from "./images/Hayu_logo_for_MLP_Grid.jpg";
-//import bigimg from "./images/bigimg.jpg";
-import bigimg from "./images/bigimg.jpg";
-import prime from "./images/PRIME_multi-benefit_MAGNET_2X._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
-import mpltemplate from "./images/MLP_Template_Image_Left._SX1440_CR0,0,865,675_QL80_AC_FP_.jpg";
-import inkids from "./images/IN-kids-30Jan._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
+import { Navbarfirst } from "../Navbar/Navbarfirst";
+import liongateimg from "../../Images/LionsgatePlay-426X2946_V1.jpg";
+import discoveryimg from "../../Images/426x294_Discovery.jpg";
+import erosnow from "../../Images/Erosnow-426X2948_V1.jpg";
+import hoicimg from "../../Images/hoichoi-426X2946_V1.jpg";
+import docubay from "../../Images/Docubay-426X2947_V1.jpg";
+import shortstv from "../../Images/ShortsTV-426X2944_V1.jpg";
+import mubi from "../../Images/Mubi-426X2946_V1.jpg";
+import manorama from "../../Images/426x294_MANORAMAMAX.jpg";
+import hayu from "../../Images/Hayu_logo_for_MLP_Grid.jpg";
+//import bigimg from "../../Images/bigimg.jpg";
+import bigimg from "../../Images/bigimg.jpg";
+import prime from "../../Images/PRIME_multi-benefit_MAGNET_2X._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
+import mpltemplate from "../../Images/MLP_Template_Image_Left._SX1440_CR0,0,865,675_QL80_AC_FP_.jpg";
+import inkids from "../../Images/IN-kids-30Jan._SX1440_CR575,0,865,675_QL80_AC_FP_.jpg";
 import { Link } from "react-router-dom";
 export const Firsthome = () => {
   return (
@@ -27,7 +27,7 @@ export const Firsthome = () => {
                 Join Prime to watch the latest movies, TV shows and
                 award-winning Amazon Originals
               </p>
-              {/* <Link to="/login" target='_blank' style={{textDecorationLine:'none', color: "white", fontSize: "20px" }}>Sign In</Link>         */}
+              <Link to="/login" target='_blank' style={{textDecorationLine:'none', color: "white", fontSize: "20px" }}>Sign In</Link>        
 
               <button
                 style={{

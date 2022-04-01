@@ -13,7 +13,7 @@ const HomePage = () => {
 
 
   return (
-    <div>
+    <div className='HomePage_Div_Compnent'>
         <ImagesSlider slides={SliderData} />
         <AllMovieList/>
         

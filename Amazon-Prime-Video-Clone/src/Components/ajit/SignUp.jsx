@@ -56,7 +56,7 @@ const Signup = () => {
         })}          
         </ul>
         </div>}
-      <section>
+      <section className='SignUp_Section'>
             <div className="sign_container">
                 <div className="sign_header">
                     {/* <img src="./blacklogoamazon.png" alt="signupimg" /> */}

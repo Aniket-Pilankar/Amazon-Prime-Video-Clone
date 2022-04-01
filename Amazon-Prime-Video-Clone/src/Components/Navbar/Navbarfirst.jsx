@@ -1,4 +1,5 @@
-import navbarimg from "./images/web_footer_logo._CB462908456_.png";
+// import navbarimg from "./images/web_footer_logo._CB462908456_.png";
+import navbarimg from '../../Images/web_footer_logo._CB462908456_.png';
 
 import { FaGlobe } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -7,7 +8,7 @@ export const Navbarfirst = () => {
   return (
     <div className="navbardiv">
       <div className="leftnavbardiv">
-        <img src={navbarimg} />
+        <img src={navbarimg} width={'10px'} />
       </div>
       <div
         style={{

@@ -1,4 +1,8 @@
-.slider{
+/* body{
+    background-color: #0f171e;
+} */
+
+.ImagesSlider_div_component{
     border: 1px solid red;
     position: relative;
     height: 300px;

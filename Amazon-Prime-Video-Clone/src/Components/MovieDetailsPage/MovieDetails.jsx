@@ -1,10 +1,11 @@
 import {axios} from "axios"
 
-import "./movieDetails.css"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { Related } from "./Related"
 import { Details } from "./Details"
+import { FaImdb,FaPlay,FaPlus,FaDownload,FaPlayCircle } from "react-icons/fa";
+import "./movieDetails.css"
 
 export const MovieDetails = () => {
     const data=  
@@ -31,7 +32,7 @@ export const MovieDetails = () => {
         // axios.get("http://localhost:2345/movieData").then(({data}) => {
         //     console.log(data);
         // });
-    })
+    },[])
     const [page, setPage] = useState("true");
     // const [play, setPlay] = useState(0);
     // console.log(play)
@@ -42,15 +43,17 @@ export const MovieDetails = () => {
     const [play,setPlay] = useState("true")
 
     return (
-        <div>
+        <div className="MovieDetails_Div_Component">
             <div className="Main_div"
+            
                 // style={{ backgroundImage: "url('https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4b0182f25032adfd88472562ce0b1dd54cdf2e28bdf4ee78ecc04b1cc78da8f4._RI_V_TTW_.png')" }}
             >
-                <div className="data_div">
-                    <p>AMAZON ORIGINAL</p>
+                <div className="data_div" style={{zIndex:'999',overflow:'hidden'}}>
+                    {/* <p>AMAZON ORIGINAL</p> */}
                     <h1 id="title">{data.title}</h1>
                     <div className="miniDes_div">
-                        <p><img className="title_below_img"src="\src\images\imdb.png" alt=""/></p>
+                        {/* <p><img className="title_below_img"src="\src\images\imdb.png" alt=""/></p> */}
+                        <FaImdb size={'30px'}/>
                         <p>{data.rating}</p>
                         <p>{data.duration}</p>
                         <p>{data.year}</p>
@@ -58,15 +61,29 @@ export const MovieDetails = () => {
                         <p><button className="title_below_btn">U/A 18+</button></p>
                         <p><img className="title_below_img" src="\src\images\msg.png" alt=""/></p>
                     </div>
+                    <p>{data.description}</p>
                     <div className="playOpt_div">
                         {/* <button id="play_btn" onClick={() => { cal(+1) }}>{play === 0 ? "Play" : "Continue Watching"}</button> */}
-                        <button id="play_btn" onClick={() => setPlay(!play)}>{play? "Play" : "Continue Watching"}</button>
-                        <p><img style={{ width: "40%",marginRight:"30px" }} src="\src\images\play.png" alt=""/></p>
-                        <p><img style={{ width: "50%" }} src="\src\images\add.png" alt="watchList" /></p>
-                        <p><img style={{ width: "25%" }} src="\src\images\watchParty.png" alt="" /></p>
-                        <p><img style={{ width: "50%"}} src="\src\images\download.png" alt=""/></p>
+                        {/* <button id="play_btn" onClick={() => setPlay(!play)}>{play? "Play" : "Continue Watching"}</button> */}
+                        {/* <div> */}
+                                {/* <FaPlay size={'20px'} style={{background:'transparent'}}/> */}
+                                {/* <h3 style={{background:'transparent'}}>Play</h3> */}
+                        {/* </div> */}
+                        {/* <p><img style={{ width: "40%",marginRight:"30px" }} src="\src\images\play.png" alt=""/></p> */}
+                        {/* <p><img style={{ width: "50%" }} src="\src\images\add.png" alt="watchList" /></p> */}
+                        {/* <p><img style={{ width: "25%" }} src="\src\images\watchParty.png" alt="" /></p> */}
+                        {/* <p><img style={{ width: "50%"}} src="\src\images\download.png" alt=""/></p> */}
+                        <div className="minivideoPlayer-button">
+                            <div>
+                                <FaPlay size={'20px'} style={{background:'transparent'}}/>
+                                <h3 style={{background:'transparent'}}>Play</h3>
+                            </div>
+                            <div><FaPlus style={{background:'transparent'}} size={'20px'}/></div>
+                            <div><FaPlayCircle style={{background:'transparent'}} size={'20px'}/></div>
+                            <div><FaDownload style={{background:'transparent'}} size={'20px'}/></div>
+                            {/* <div><IoMdInformationCircle style={{background:'transparent'}} size={'20px'}/></div> */}
+                        </div>
                     </div>
-                    <p>{data.description}</p>
                     <div className="extraDetail_div">
                         <div className="headings">
                             <p>Director </p>
@@ -91,12 +108,14 @@ export const MovieDetails = () => {
                         // position: "relative",
                 /* z-index: 100; */
                 /* background-color: rgba(0,0,0,0.5); */
-                      opacity:"0.2",
+                      opacity:"0.8",
                       backgroundSize:"cover",
                       width:"100%",
+                      height: '500px',
+                      border: '1px solid red'
             }}
                 >
-                    <img style={{width:"80%",paddingLeft:"20%"}}src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4b0182f25032adfd88472562ce0b1dd54cdf2e28bdf4ee78ecc04b1cc78da8f4._RI_V_TTW_.png"/>
+                    <img style={{width:"20%",height:"90%",marginLeft:"0%",overflow:'hidden'}} src="https://images-eu.ssl-images-amazon.com/images/S/pv-target-images/4b0182f25032adfd88472562ce0b1dd54cdf2e28bdf4ee78ecc04b1cc78da8f4._RI_V_TTW_.png"/>
                 </div>
                
             </div>
@@ -115,7 +134,7 @@ export const MovieDetails = () => {
                 <h2 onClick={() => setPage(false)}>Details</h2>
             </div>
 
-            <div className="slider_div">
+            <div className="slider_div123">
                     {page? <Related /> : <Details />}
 
             </div>

@@ -21,13 +21,14 @@ const ImagesSlider = ({slides}) => {
       console.log('currentSliderImage:', currentSliderImage)
 
   return (
-    <section className='slider'>
+    <section className='ImagesSlider_div_component'>
         <FaArrowLeft className='left-arrow' onClick={prevSlide} />
         <FaArrowRight className='right-arrow' onClick={nextSlide} />
         {SliderData.map((slide,index) => (
             <div className={index === currentSliderImage ? 'slide-active' : 'slide'} key={index} >
               {index === currentSliderImage && (
                 <img src={slide.image} alt="images" className='imageSlide' width={'100%'} />
+               
               )}
             </div>
         ))}

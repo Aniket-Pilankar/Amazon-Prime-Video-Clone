@@ -1,4 +1,4 @@
-body{
+.MovieDetails_Div_Component{
     background-color: black;
     color: white;
 }
@@ -34,10 +34,12 @@ body{
 }
 
 .miniDes_div{
+    border: 1px solid red;
     display: flex;
     /* justify-content: space-between; */
     gap:2%;
     text-align: center;
+    align-items: center;
 }
 .title_below_btn{
     background-color: black;
@@ -100,7 +102,7 @@ body{
     background-color: none;
 }
 
-.slider_div{
+.slider_div123{
     box-sizing: border-box;
     margin:auto;
     margin-top: 2%;
@@ -108,3 +110,10 @@ body{
     width:98%;
     padding-left: 5%;
 }
+/* .minivideoPlayer-button > div:nth-child(1):hover{
+    background-color: #0f84bf;
+    cursor: pointer;
+} 
+.minivideoPlayer-button > div:hover{
+    background-color: #51667c;
+}  */

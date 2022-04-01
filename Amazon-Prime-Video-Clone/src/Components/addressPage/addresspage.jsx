@@ -1,9 +1,9 @@
 import { useState } from "react"
-import cardlogo from "./images/cardlogo.png"
+import cardlogo from "../../Images/black-prime-logo.jpeg"
 import axios from "axios"
 import "./add.css"
 
-export const Add=()=>{
+export const Address=()=>{
 
  const [check,subcheck]=useState(false)
  const [form,setform]=useState({
@@ -42,7 +42,7 @@ export const Add=()=>{
        <>
             <div className="top">
             <div className="primelogo">
-            <img className="logomain" src={cardlogo}></img>
+            <img className="logomain"  src={cardlogo}></img>
             <h3 className="headw">Watch now, cancel anytime</h3>
             <p className="textw">Start your 30-day free trial</p>
             </div>

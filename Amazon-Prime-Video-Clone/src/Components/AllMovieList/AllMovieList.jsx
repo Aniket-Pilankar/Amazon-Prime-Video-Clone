@@ -6,7 +6,7 @@ import PrimeVideoList from '../PrimeVideoList/PrimeVideoList';
 
 const AllMovieList = () => {
   return (
-    <div>
+    <div className='AllMovieList_Div_Component'>
         <Recommended/>
         <MiniVideoPlayer/>
         <PrimeVideoList/>

@@ -6,7 +6,7 @@ import { FaPlay } from "react-icons/fa";
 
 const MiniVideoPlayer = () => {
     return (
-        <div>
+        <div className='MiniVideoPlayer_Div_Component'>
             <div className='videoPoster'>
                 <div className='videoMiniPlayer_box1'>
                     <div>
