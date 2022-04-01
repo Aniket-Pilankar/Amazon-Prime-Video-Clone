@@ -1,0 +1,259 @@
+#navdiv{
+    
+    display: grid;
+    grid-template-columns: 15% 50% 35%;
+    grid-template-rows: 70px;
+    grid-template-areas: 
+                         "x y w";
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#navdiv>:nth-child(1){
+   grid-area: x; 
+   /* border: 1px solid green; */
+}
+#navdiv>:nth-child(1)>:nth-child(1){
+    width: 80%;
+    text-align: left;
+    height: 60%;
+    margin-top: 5%
+ }
+ 
+
+#navdiv>:nth-child(2){
+    grid-area: y; 
+    /* border: 1px solid green; */
+ }
+ #navdiv>:nth-child(3){
+    grid-area: w; 
+    /* border: 7px solid green; */
+ }
+ 
+ 
+#leftdiv{
+    width: 60%;
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(100px);
+    grid-template-areas: 
+                 "a b c d e";
+    /* border:1px solid red; */
+    grid-gap: 20px;
+}
+#leftdiv>:nth-child(1){
+    grid-area: a;
+
+
+}
+#leftdiv> div:hover{
+text-decoration: underline;
+}
+
+#leftdiv>:nth-child(2){
+    grid-area:b;
+
+}
+#leftdiv>:nth-child(3){
+    grid-area: c;
+
+}
+#leftdiv>:nth-child(4){
+    grid-area: d;
+
+}
+#leftdiv>:nth-child(5){
+    grid-area: e;
+
+}
+#rightdiv{
+width:100%;
+display: flex;
+}
+#rightdiv>:nth-child(1){
+    width: 60%;
+    /* border: 6px solid yellow; */
+    height: 60%;
+    font-size: 20px;
+    /* border: 1px solid white; */
+    margin-top: 2%;
+}
+#rightdiv>:nth-child(2){
+    
+    width: 40%;
+    /* border:4px solid red; */
+}
+#rightdiv>:nth-child(1)>input{
+    width: 90%;
+    /* border: 2px solid magenta; */
+    height: 80%;
+    background-color:transparent;
+    color: white;
+    
+}
+#rightdiv>:nth-child(2)>div>i>{
+    text-align:left;
+    font-size: 20px;
+    margin-left: 1px;
+   margin-top:5px;
+    
+    
+}
+#fa_fa{
+    color: white;
+    font-size: 23px;
+}
+#fa_faa{
+    color: white;font-size: 40px;
+    border: 1px solid red;
+}
+
+.hidebox{
+    margin:auto;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    border: 2px solid red;
+}
+
+
+#maindiv{
+    width: 100%;
+    
+    height: 80px;
+    /* border: 5px solid teal; */
+    gap: 10px;
+}
+#maindiv>:nth-child(1){
+    width: 100%;
+    border: 2px solid green;
+}
+#maindiv>:nth-child(2){
+    width: 90%;
+    /* border: 2px solid rgb(13, 66, 241); */
+    padding: 20px 40px 20px 40px;
+    
+}
+.hidebox{
+    display: flex;
+    margin: auto;
+    padding: 1px 40px 20px 40px;
+    height: 350px;
+
+}
+#user{
+    font-size: 30px;
+    margin-top: 7%;
+}
+
+.hidebox>:nth-child(1){
+    width: 50%;
+    border: 1px solid red;
+    height: 100%;
+}
+.hidebox>:nth-child(2){
+    width: 50%;
+    border: 1px solid red;
+    height: 100%;
+    padding: 1px 20px 20px 60px;
+    text-decoration: none;
+    display: flex;
+}
+#catdiv{
+    width: 50%;
+    height: 100%;
+    border: 1px solid red;
+    text-align: left;
+    padding: 1px 20px 20px 40px;
+}
+#catdivmain{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 100px;
+    grid-template-areas: "p q r"
+                         "s t 0" ;
+                
+    grid-gap: 10px;
+   
+}
+#catdivmain>div:hover{
+cursor: pointer;
+zoom: 1;
+}
+#catdivmain>div{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 500;
+    padding:auto;
+    background-image: url("../img/blue-background-design.jpg");
+    padding: 20px 0px 0px 0px;
+}
+#catdivmain>:nth-child(1){
+    grid-area: p;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+#catdivmain>:nth-child(2){
+    grid-area: q;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+#catdivmain>:nth-child(3){
+    grid-area: r;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+#catdivmain>:nth-child(4){
+    grid-area: s;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+#catdivmain>:nth-child(5){
+    grid-area: t;
+    border: 1px solid red;
+    border-radius: 5%;
+}
+
+#language{
+    width: 60%;
+    
+    height: 100%;
+    border: 1px solid red;
+    text-align: left;
+}
+.rahultb{
+    width: 100%;
+    
+margin-left: 0px;
+    text-align: left;
+    border: 1px solid green;
+}
+.rahultb>tr{
+    width: 40px;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid green;
+}
+#rahultb>tr>td{
+    width: 100%;
+    margin-left: 20px;
+}
+/* table {
+    border: 2px solid forestgreen;
+    width: 100%;
+    height: 200px;
+  } */
+  .rahultbh {
+
+width: 100%;
+height: 200px;
+
+border: 4px sold red;
+  }
+  #movcat{
+      text-align: left;
+      margin-left: 30px;
+  }
