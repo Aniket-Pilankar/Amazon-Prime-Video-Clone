@@ -6,7 +6,7 @@
 .pay > h3:nth-child(1){
     /* border: 1px solid red; */
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .top{

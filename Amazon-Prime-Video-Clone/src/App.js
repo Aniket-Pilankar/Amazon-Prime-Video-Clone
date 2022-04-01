@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import HomePage from './Components/HomePage/HomePage';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
+import {Navbar} from './Components/Navbar1/navbar';
 import TvShows from './Components/TvShows/TvShows';
 import { Navbarfirst } from './Components/Navbar/Navbarfirst';
 import { Card } from './Components/cardpage/card'

@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import { useEffect } from "react"
-import img1 from "../componants'/cardlogonew.png"
+// import img1 from "../componants'/cardlogonew.png"
+import img1 from "../../Images/cardlogonew.png"
 import "./navbar.css"
 
 export const Navbar=()=>{
@@ -38,7 +39,7 @@ const buttonRef = useRef(null);
           <div className="searchbar"><span class="material-icons-outlined"  style={{color:"white",margin:"0px 10px"}}>
 search
 </span>
-          <input type="text" placeholder="Search"></input>
+          <input  type="text" placeholder="Search"></input>
           </div>
           <div className="user">
             <div className="userlogo">
@@ -70,7 +71,7 @@ search
         <div className="kids">
           <div className="kids1">
             <div className="kidsimg">
-              <img className="kidlogo" src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/kid-1.png" ></img>
+              <img className="kidlogo" src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/kid-1.png" width={"30px"}></img>
             </div>
             <div className="droptext">Kids</div>
           </div>

@@ -11,16 +11,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { displaySingleMovieData } from "../../Redux/RecommendedMovies/action";
 
 export const MovieDetails = () => {
-
+    const [mmm, setmmm] = useState({})
     const dispatchOneMovieData = useDispatch()
     const IndividualMovie = useSelector((store) => store.recMovies.displaySingleMovie.payload)
     console.log('IndividualMovie:', IndividualMovie)
-    const data = IndividualMovie.data
+
+    // const data = IndividualMovie.data
+    const data = mmm
     console.log('data:', data)
     // 
     const { imdbID } = useParams()
     console.log('imdbID:', imdbID)
-
+    
     const asddata =
     {
         "id": 1,
@@ -40,7 +42,7 @@ export const MovieDetails = () => {
         "content_advisory": "Smoking, substance use, alcohol use, foul language, sexual content, violence",
         "supporting_cast": "Naveen Chandra, Navdeep, Harsha, Mahima Makwana, Karma McCain"
     }
-
+    
     useEffect(() => {
         getSingleMovieData()
     }, [])
@@ -48,22 +50,24 @@ export const MovieDetails = () => {
     // const [play, setPlay] = useState(0);
     // console.log(play)
     // const cal = (value) => {
-    //     setPlay(play + value);
-    //     console.log(value)
-    // }
-    const [play, setPlay] = useState("true")
+        //     setPlay(play + value);
+        //     console.log(value)
+        // }
+        const [play, setPlay] = useState("true")
+        
+        const getSingleMovieData = () => {
+            axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=70da77ac`).then((res) => {
+                console.log('resgetSingleMovieData:', res)
+                const { data, status, statusText } = res;
+                console.log('data,status,statusText222:', data, status, statusText)
+                setmmm(res.data)
+                dispatchOneMovieData(displaySingleMovieData(res))
+            })
+        }
+        // console.log('mmm:', mmm)
 
-    const getSingleMovieData = () => {
-        axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=70da77ac`).then((res) => {
-            console.log('resgetSingleMovieData:', res)
-            const { data, status, statusText } = res;
-            console.log('data,status,statusText222:', data, status, statusText)
-            dispatchOneMovieData(displaySingleMovieData(res))
-        })
-    }
-
+        {/* <h1>er</h1> */}
     return (
-
         <div className="MovieDetails_Div_Component">
             <div className="Main_div"
 
@@ -75,7 +79,7 @@ export const MovieDetails = () => {
                     <div className="miniDes_div">
                         {/* <p><img className="title_below_img"src="\src\images\imdb.png" alt=""/></p> */}
                         <FaImdb size={'30px'} />
-                        <p>{data.Ratings[0].Value}</p>
+                        {/* <p>{data.Ratings[0].Value}</p> */}
                         <p>{data.Runtime}</p>
                         <p>{data.Year}</p>
                         <p><button className="title_below_btn">X-Ray</button></p>

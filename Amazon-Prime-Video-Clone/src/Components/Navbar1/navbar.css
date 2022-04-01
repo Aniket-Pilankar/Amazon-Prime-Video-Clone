@@ -1,4 +1,5 @@
 .navbar{
+    border: 1px solid red;
     width: 100%;
     height: 70px;
     padding-top:30px ;
@@ -26,7 +27,7 @@
   .Home:hover{
       border-bottom: 2px solid white;
   }
-  .TVshow{
+  .navbar > .TVshow{
     width: 90px;
     height: 24px;
     margin-left: 20px;
@@ -81,9 +82,10 @@
     border-bottom: 2px solid white;
 }
 .searchbar{
+  
   width: 250px;
   height: 40px;
-  margin-left: 500px;
+  margin-left: 300px;
   display: flex;
   border: 1px solid white;
   align-items: center;
@@ -93,8 +95,8 @@
  
   width: 100%;
   background-color: #1a242f;
- 
- 
+  margin-top: 13px;
+  outline: none;
   color: white;
   font-size: 20px;
   border: transparent;
@@ -155,19 +157,23 @@
   display: flex;
 }
 .kidsimg{
-  width: 30%;
-  height: 100%;
-
+  /* border: 1px solid red; */
+  width: 15%;
+  height: 50%;
+  margin-left: 10px;
 }
 
 .kidlogo{
-  width: 40px;
+  /* border: 1px solid red; */
+  width: 10px;
+  height: 5px;
   margin-top: 12px;
 }
 .droptext{
   color: white;
   font-size: 18px;
  margin-top: 15px;
+ margin-left: 10px;
 }
 .droptext1{
   color: white;
