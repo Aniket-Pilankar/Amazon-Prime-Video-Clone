@@ -13,7 +13,7 @@
     /* background-color: rgba(0,0,0,0.5); */
 /* opacity:0.8; */
     display:flex;
-    justify-content:safe;
+    
 }
 .data_div{
     box-sizing: border-box;
@@ -29,14 +29,14 @@
     font-weight: 100;
 }
 #title{
-    color: rgb(92, 88, 88);
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .miniDes_div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
-    /* justify-content: space-between; */
+    
     gap:2%;
     text-align: center;
     align-items: center;
@@ -110,10 +110,11 @@
     width:98%;
     padding-left: 5%;
 }
-/* .minivideoPlayer-button > div:nth-child(1):hover{
+.minivideoPlayer-button > div:nth-child(1):hover{
     background-color: #0f84bf;
     cursor: pointer;
 } 
 .minivideoPlayer-button > div:hover{
     background-color: #51667c;
-}  */
+    cursor: pointer;
+} 

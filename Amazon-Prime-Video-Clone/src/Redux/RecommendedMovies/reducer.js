@@ -1,10 +1,11 @@
-import { HORROR_MOVIE, RECOMMENDED_MOVIE, TOP_MOVIE ,LATEST_MOVIE} from "./action";
+import { HORROR_MOVIE, RECOMMENDED_MOVIE, TOP_MOVIE ,LATEST_MOVIE,DISPLAYSINGLEMOVIE} from "./action";
 
 const initialstate = {
     recMovie: [],
     horrorMovie:[],
     topMovie:[],
-    latestMovie:[]
+    latestMovie:[],
+    displaySingleMovie:{}
 }
 
 export const movieListreducer = (store = initialstate,{type,payload}) => {
@@ -21,6 +22,9 @@ export const movieListreducer = (store = initialstate,{type,payload}) => {
 
         case LATEST_MOVIE:
             return {...store,latestMovie:[...payload]}
+
+        case DISPLAYSINGLEMOVIE:
+            return {...store,displaySingleMovie:{payload}}
 
         default:
             return store
