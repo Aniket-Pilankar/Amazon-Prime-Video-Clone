@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect,useRef } from 'react'
 import { useDispatch,useSelector } from 'react-redux'
-import {topMovie,latestMovie} from '../../Redux/RecommendedMovies/action'
+import {topMovie, latestMovie } from '../../Redux/RecommendedMovies/action'
 import {FaAngleLeft,FaAngleRight} from 'react-icons/fa';
 // import MiniVideoPlayer from '../MiniVideoPlayer/MiniVideoPlayer';
 import './PrimeVideoList.css'
@@ -11,7 +11,8 @@ const PrimeVideoList = () => {
 
     const dispatch = useDispatch()
     const movies = useSelector((store) => store.recMovies.topMovie)
-    const latestMovie = useSelector((store) => store.recMovies.latestMovie)
+    const latestMovies = useSelector((store) => store.recMovies.latestMovie)
+    // console.log('latestMovie:', latestMovie)
     // console.log('movies99:', movies)
 
     useEffect(() => {
@@ -34,10 +35,11 @@ const PrimeVideoList = () => {
         const {data,status,statusText} = res;
 
         if(name === 'Friends'){
-        console.log('reshorror:', res)
+        
           dispatch(topMovie(data.Search))
         }
         else if(name === "Harry"){
+          console.log('latestMovie',data)
             dispatch(latestMovie(data.Search))
         }
       })
@@ -76,7 +78,7 @@ const PrimeVideoList = () => {
       <div className='moviesDisplay' ref={latest_movies_ref} >
         <FaAngleLeft className='latest-left-arrow-shadow top-left-arrow-shadow' onClick={() => {latest_movies_ref_moveLeft(500)}} />
         <FaAngleRight className='latest-right-arrow-shadow top-right-arrow-shadow' onClick={() => {latest_movies_ref_moveRight(500)}}  />
-      {latestMovie.map((e,i) => (
+      {latestMovies.map((e,i) => (
           <div className='IndividualPoster' key={i} >
             <img src={e.Poster} alt={e.Title} />
           </div>
