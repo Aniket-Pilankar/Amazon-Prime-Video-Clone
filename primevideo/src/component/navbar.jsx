@@ -34,12 +34,12 @@ export const Nav=()=>{
             </div>
             <div id="leftdiv">
             <div> <h3>Home</h3></div>
-            <div><h3>Video</h3></div>
-            <div><h3>tv show</h3></div>
-            <div><h3>taerge</h3></div>
+            <div><h3>TV Shows</h3></div>
+            <div><h3>Movies</h3></div>
+            <div><h3>Channels</h3></div>
            
             <div className="hideboxmain" onMouseEnter={() => setIsShown(true)}
-        onMouseLeave={() => setIsShown(false)}> <h3>category</h3></div>
+        onMouseLeave={() => setIsShown(false)}> <h3>Categories</h3></div>
             </div>
             <div id="rightdiv">
             <div > <i class="fa fa-search" aria-hidden="true"></i>
@@ -54,7 +54,7 @@ export const Nav=()=>{
         <div className="hidebox">
          
          <div id="catdiv">
-             <h3>top category</h3>
+             <h3>Top categories</h3>
             <div id="catdivmain">
                 <div>include with prime</div>
                 <div>Amazon orignal</div>
@@ -64,44 +64,65 @@ export const Nav=()=>{
             </div>
          </div>
          <div >
+
+
+      
+
+
+
             
          <div id="language">
-             <h2>language</h2>
+             <h2>Audio languages</h2>
              <table className="rahultb">
-                 <tr>  <td>hindi</td>
-                  <td>english</td>
+                 <tr>  <td>English</td>
+                  <td>Hindi</td>
                  </tr>
                  <tr>
-                     <td>marathi</td>
-                     <td>urdu</td>
+                     <td>   Telugu</td>
+                     <td>Tamil</td>
                  </tr>
                  <tr>
                      <td>tamil</td>
                      <td>malyalm</td>
                  </tr>
                  <tr>
-                     <td>uropian</td>
-                     <td>chini</td>
+                     <td>Kannada</td>
+                     <td>Malayalam</td>
                  </tr>
              </table>
          </div>
+     
+
+
+
+
+
+
          <div id="movcat">
-             <h2>type</h2>
+             <h2>Other categories</h2>
          <table className="rahultbh">
-                 <tr>  <td>hindi</td>
+                 <tr>  <td>    Drama</td>
                   
                  </tr>
                  <tr>
-                     <td>marathi</td>
+                     <td>Action and adventure</td>
     
                  </tr>
                  <tr>
                      
-                     <td>malyalm</td>
+                     <td>Romance</td>
                  </tr>
                  <tr>
                      
-                     <td>chini</td>
+                     <td>Comedy</td>
+                 </tr>
+                 <tr>
+                     
+                     <td>Suspense</td>
+                 </tr>
+                 <tr>
+                     
+                     <td>Horror</td>
                  </tr>
              </table>
          </div>
