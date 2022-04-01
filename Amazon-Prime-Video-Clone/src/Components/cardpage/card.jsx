@@ -1,6 +1,7 @@
 import { useState } from "react"
 import cardlogo from "./images/cardlogo.png"
 import axios from "axios"
+import "./card.css"
 
 export const Card=()=>{
  const [data,setdata]=useState(false)
