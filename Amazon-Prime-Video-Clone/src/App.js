@@ -15,15 +15,18 @@ import { Address } from './Components/addressPage/addresspage';
 import { Landing } from './Components/Landing/landing';
 import { NavbarForLanding } from './Components/navforLanding/navforlanding';
 import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
-
+import SignUp_Page from './Components/RealSignInSigUp/SignUp_Page';
+import SIGNIN from './Components/RealSignInSigUp/SignIn_Page';
 function App() {
   return (
     <div className="App">
       
       <Routes>
         <Route path='/' element={<><NavbarForLanding/><Landing/></>}/>
-        <Route path='/signIn' element={<><SignIn/></>}/>
-        <Route path='/signUp' element={<><SignUp/></>}/>
+        {/* <Route path='/signIn' element={<><SignIn/></>}/> */}
+        <Route path='/signIn' element={<><SIGNIN/></>}/>
+        {/* <Route path='/signUp' element={<><SignUp/></>}/> */}
+        <Route path='/signUp' element={<><SignUp_Page/></>}/>
         <Route path='/homepage' element={<><Navbar/><HomePage/></>}/>
         <Route path='/paymentCardPage' element={<><Card/></>} />
         <Route path='/movieDetails/:imdbID' element={<><Navbar/><MovieDetails/></>}/>
