@@ -12,23 +12,23 @@ import { Firsthome } from './Components/Landing Home Page/Firsthome'
 import SignIn from './Components/ajit/SignIn'
 import SignUp from './Components/ajit/SignUp'
 import { Address } from './Components/addressPage/addresspage';
+import { Landing } from './Components/Landing/landing';
+import { NavbarForLanding } from './Components/navforLanding/navforlanding';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
+
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      {/* <Navbarfirst/> */}
       
-      {/* <HomePage/> */}
-      
-      {/* <TvShows/> */}
       <Routes>
-        <Route path='/' element={<Firsthome/>}/>
-        <Route path='/signIn' element={<SignIn/>}/>
-        <Route path='/signUp' element={<SignUp/>}/>
-        <Route path='/homepage' element={<HomePage/>}/>
-        <Route path='/paymentCardPage' element={<Card/>} />
-        <Route path='/movieDetails/:imdbID' element={<MovieDetails/>}/>
-        <Route path='/addressPage' element={<Address/>}/>
+        <Route path='/' element={<><NavbarForLanding/><Landing/></>}/>
+        <Route path='/signIn' element={<><SignIn/></>}/>
+        <Route path='/signUp' element={<><SignUp/></>}/>
+        <Route path='/homepage' element={<><Navbar/><HomePage/></>}/>
+        <Route path='/paymentCardPage' element={<><Card/></>} />
+        <Route path='/movieDetails/:imdbID' element={<><Navbar/><MovieDetails/></>}/>
+        <Route path='/addressPage' element={<><Address/></>}/>
+        <Route path='*' element={<><Navbar/><NotFoundPage/></>}/>
       </Routes>
       
 

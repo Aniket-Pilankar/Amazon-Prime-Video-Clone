@@ -138,7 +138,7 @@ export const MovieDetails = () => {
                         backgroundSize: "cover",
                         width: "50%",
                         height: '500px',
-                        border: '1px solid red',
+                        // border: '1px solid red',
                         marginLeft:'50%'
                     }}
                 >
