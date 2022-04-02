@@ -16,5 +16,6 @@ export const topMovie = (topMovie) => ({type:TOP_MOVIE,payload:topMovie})
 export const latestMovie = (latestMovie) => ({type:LATEST_MOVIE,payload:latestMovie})
 
 // for MovieDetailspage
+// export const displaySingleMovieData = (payload) => ({type:DISPLAYSINGLEMOVIE,payload})
 export const displaySingleMovieData = (displaySingleMovieData) => ({type:DISPLAYSINGLEMOVIE,payload:displaySingleMovieData})
 

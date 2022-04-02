@@ -11,13 +11,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { displaySingleMovieData } from "../../Redux/RecommendedMovies/action";
 
 export const MovieDetails = () => {
-    const [mmm, setmmm] = useState({})
+    const [moviedata, setmoviedata] = useState({})
     const dispatchOneMovieData = useDispatch()
     const IndividualMovie = useSelector((store) => store.recMovies.displaySingleMovie.payload)
     console.log('IndividualMovie:', IndividualMovie)
 
-    // const data = IndividualMovie.data
-    const data = mmm
+    // const data = IndividualMovie
+    const data = moviedata
     console.log('data:', data)
     // 
     const { imdbID } = useParams()
@@ -60,8 +60,8 @@ export const MovieDetails = () => {
                 console.log('resgetSingleMovieData:', res)
                 const { data, status, statusText } = res;
                 console.log('data,status,statusText222:', data, status, statusText)
-                setmmm(res.data)
-                dispatchOneMovieData(displaySingleMovieData(res))
+                setmoviedata(res.data)
+                dispatchOneMovieData(displaySingleMovieData(res.data))
             })
         }
         // console.log('mmm:', mmm)
