@@ -1,23 +1,26 @@
-.navbar{
+.landing-navbar{
+  /* border: 1px solid red; */
     width: 100%;
-    height: 70px;
+    height: 60px;
     padding-top:30px ;
     background-color: #08415b;
     display: flex;
+    justify-content: space-evenly;
   }
   
-  .logo{
-    width: 20%;
-    height: 40px;
+  .landing-logo{
+    
+    width: 1%;
+    height: 50px;
     }
-  .lang{
+  .landing-lang{
     width: 5%;
     height: 70%;
     
     margin-left: 1000px;
     display: flex;
   }
-  .user{
+  .landing-user{
       width: 9%;
       height: 70%;
      
@@ -31,6 +34,7 @@
       
   }
   .langtext{
+    display: flex;
       color: white;
       font-size: 20px;
       margin-top: 5px;
@@ -84,7 +88,7 @@
    margin-top: 22px;
   
   }
-  .userlogo{
+  .landing-userlogo{
     width: 27%;
     height: 100%;
   
