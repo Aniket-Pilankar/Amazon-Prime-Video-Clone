@@ -14,6 +14,7 @@ import SignUp from './Components/ajit/SignUp'
 import { Address } from './Components/addressPage/addresspage';
 import { Landing } from './Components/Landing/landing';
 import { NavbarForLanding } from './Components/navforLanding/navforlanding';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path='/paymentCardPage' element={<><Card/></>} />
         <Route path='/movieDetails/:imdbID' element={<><Navbar/><MovieDetails/></>}/>
         <Route path='/addressPage' element={<><Address/></>}/>
+        <Route path='*' element={<><Navbar/><NotFoundPage/></>}/>
       </Routes>
       
 
