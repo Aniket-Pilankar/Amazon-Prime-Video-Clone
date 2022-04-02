@@ -81,7 +81,10 @@ const Recommended = () => {
         <FaAngleRight className='horror-arrow-shadow right-arrow-shadow' onClick={() => {horror_moveRight(500)}}  />
       {horror_movie.map((e,i) => (
           <div className='IndividualPoster' key={i} >
+            <Link to={`/movieDetails/${e.imdbID}`}>
             <img src={e.Poster} alt={e.Title} />
+            </Link>
+            
           </div>
           ))}
 

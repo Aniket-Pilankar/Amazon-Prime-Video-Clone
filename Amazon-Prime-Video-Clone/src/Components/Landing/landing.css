@@ -128,7 +128,7 @@ background-size: cover;
   border: transparent;
   color: #eafcfc;
   font-family: sans-serif;
- 
+  cursor: pointer;
 }
 .button3:hover{
     cursor: pointer;
