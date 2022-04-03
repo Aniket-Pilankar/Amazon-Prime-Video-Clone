@@ -137,7 +137,7 @@ export const NavbarForLanding = () => {
         </div>
       </div>
 
-      <div className="drop">
+      <div className="drop" style={{ display: drop2 ? "flex" : "none" }}>
         <div className="childdrop" ref={buttonRef2}>
           <div>
             <div className="kids1">
