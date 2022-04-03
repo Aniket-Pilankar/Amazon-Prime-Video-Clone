@@ -50,6 +50,7 @@ const SIGNIN = () => {
         }
 
         navigate('/paymentCardPage')
+        // navigate('/homepage')
 
 
         } catch (error) {
