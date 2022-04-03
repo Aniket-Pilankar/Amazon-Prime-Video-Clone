@@ -17,20 +17,23 @@ import { NavbarForLanding } from './Components/navforLanding/navforlanding';
 import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
 import SignUp_Page from './Components/RealSignInSigUp/SignUp_Page';
 import SIGNIN from './Components/RealSignInSigUp/SignIn_Page';
+import { Footer } from './Components/Footer/Footer015';
+import {Wishlist} from './Components/wishllist/wishlist'
 function App() {
   return (
     <div className="App">
       
       <Routes>
-        <Route path='/' element={<><NavbarForLanding/><Landing/></>}/>
+        <Route path='/' element={<><NavbarForLanding/><Landing/><Footer/></>}/>
         {/* <Route path='/signIn' element={<><SignIn/></>}/> */}
         <Route path='/signIn' element={<><SIGNIN/></>}/>
         {/* <Route path='/signUp' element={<><SignUp/></>}/> */}
         <Route path='/signUp' element={<><SignUp_Page/></>}/>
-        <Route path='/homepage' element={<><Navbar/><HomePage/></>}/>
+        <Route path='/homepage' element={<><Navbar/><HomePage/><Footer/></>}/>
         <Route path='/paymentCardPage' element={<><Card/></>} />
-        <Route path='/movieDetails/:imdbID' element={<><Navbar/><MovieDetails/></>}/>
+        <Route path='/movieDetails/:imdbID' element={<><Navbar/><MovieDetails/><Footer/></>}/>
         <Route path='/addressPage' element={<><Address/></>}/>
+        <Route path='/wishlist' element={<><Navbar/><Wishlist/><Footer/></>}/>
         <Route path='*' element={<><Navbar/><NotFoundPage/></>}/>
       </Routes>
       

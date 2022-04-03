@@ -31,7 +31,8 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo">
-        <img className="logoimg1" src={img1}></img></div>
+        <Link to={'/homepage'}><img className="logoimg1" src={img1}></img></Link>
+        </div>
       <Link to={'/homepage'} ><div className="Home">Home</div></Link>
       <div className="TVshow">TV Shows</div>
       <div className="Movies">Movies</div>
@@ -54,7 +55,7 @@ export const Navbar = () => {
         <div className="childdrop" ref={buttonRef}>
           <div>
             <div className="kids1">
-              <div className="droptext1">Your Watchlist</div>
+              <Link to={'/wishlist'}><div className="droptext1">Your Watchlist</div></Link>
             </div>
             <div className="kids1">
               <div className="droptext1">Account & Settings</div>

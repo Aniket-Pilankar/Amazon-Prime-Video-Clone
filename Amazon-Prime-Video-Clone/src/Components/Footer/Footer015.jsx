@@ -1,5 +1,5 @@
 import './footer.css'
-//import { SiPrimevideo } from 'react-icons/si'
+import { SiPrimevideo } from 'react-icons/si'
 export function Footer() {
   return (
     <div className='footer'>
