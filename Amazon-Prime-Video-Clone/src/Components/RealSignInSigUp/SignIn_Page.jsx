@@ -49,8 +49,8 @@ const SIGNIN = () => {
             return
         }
 
-        navigate('/paymentCardPage')
-        // navigate('/homepage')
+        // navigate('/paymentCardPage')
+        navigate('/homepage')
 
 
         } catch (error) {
