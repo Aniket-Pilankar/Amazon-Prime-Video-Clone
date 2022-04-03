@@ -37,7 +37,8 @@ const SignUp_Page = () => {
         try {
             console.log('ASD:', ddata)
             // let res = await axios.post('http://localhost:4040/register',ddata)
-            let res = await fetch('http://localhost:4040/register', {
+            // let res = await fetch('http://localhost:4040/register', {
+            let res = await fetch('https://desolate-woodland-56350.herokuapp.com/register', {
 
                 method: 'POST',
                 body: ddata,
