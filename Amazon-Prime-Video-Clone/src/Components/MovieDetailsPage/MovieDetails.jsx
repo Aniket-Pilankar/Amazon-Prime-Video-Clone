@@ -56,7 +56,7 @@ export const MovieDetails = () => {
         const [play, setPlay] = useState("true")
         
         const getSingleMovieData = () => {
-            axios.get(`http://www.omdbapi.com/?i=${imdbID}&apikey=70da77ac`).then((res) => {
+            axios.get(`https://www.omdbapi.com/?i=${imdbID}&apikey=70da77ac`).then((res) => {
                 console.log('resgetSingleMovieData:', res)
                 const { data, status, statusText } = res;
                 console.log('data,status,statusText222:', data, status, statusText)

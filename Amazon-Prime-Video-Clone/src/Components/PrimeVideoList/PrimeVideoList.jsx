@@ -32,7 +32,7 @@ const PrimeVideoList = () => {
   // }
 
   const getMovieData = (name) => {
-    axios.get(`http://www.omdbapi.com/?s=${name}&apikey=70da77ac`).then((res) => {
+    axios.get(`https://www.omdbapi.com/?s=${name}&apikey=70da77ac`).then((res) => {
       const { data, status, statusText } = res;
 
       if (name === 'Friends') {

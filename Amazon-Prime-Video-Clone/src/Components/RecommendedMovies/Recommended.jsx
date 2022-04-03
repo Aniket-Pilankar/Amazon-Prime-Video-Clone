@@ -21,7 +21,7 @@ const Recommended = () => {
     },[])
 
     const getstate = () => {
-        axios.get(`http://www.omdbapi.com/?s=Marvel&apikey=70da77ac`).then((res) => {
+        axios.get(`https://www.omdbapi.com/?s=Marvel&apikey=70da77ac`).then((res) => {
             const {data,status,statusText} = res
             console.log('data,status,statusText:', data,status,statusText)
             console.log('res:', res)
@@ -30,7 +30,7 @@ const Recommended = () => {
     }
 
     const getHorrorMovie = (name) => {
-      axios.get(`http://www.omdbapi.com/?s=${name}&apikey=70da77ac`).then((res) => {
+      axios.get(`https://www.omdbapi.com/?s=${name}&apikey=70da77ac`).then((res) => {
         const {data,status,statusText} = res;
 
         if(name === 'horror'){

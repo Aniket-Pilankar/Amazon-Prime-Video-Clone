@@ -27,7 +27,8 @@ const MiniVideoPlayer = () => {
                     </div>
                 </div>
                 <div className='videoMiniPlayer_box2'>
-                    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" autoPlay muted loop id="myVideo" height={'95%'} width={'100%'}  ></video>
+                    {/* <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4" autoPlay muted loop id="myVideo" height={'95%'} width={'100%'}  ></video> */}
+                    <video src="https://www.appsloveworld.com/wp-content/uploads/2018/10/640.mp4" type="video/mp4" autoPlay muted loop id="myVideo" height={'95%'} width={'100%'}  ></video>
                 </div>
             </div>
         </div>
