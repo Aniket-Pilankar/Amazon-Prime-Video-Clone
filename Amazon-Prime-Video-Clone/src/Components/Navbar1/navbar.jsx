@@ -47,9 +47,11 @@ export const Navbar = () => {
         <div className="userlogo">
           <img src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/adult-1.png" style={{ width: "100%" }}></img>
         </div>
+        {/* <Link to={'/signUp'} > */}
         <div className="username" onClick={() => { changedrop() }}>
           User...{drop ? <span class="material-icons-outlined">arrow_drop_down</span> : <span class="material-icons-outlined">arrow_drop_up</span>}
         </div>
+        {/* </Link> */}
       </div>
       <div className="drop" style={{ display: drop ? "flex" : "none" }}>
         <div className="childdrop" ref={buttonRef}>

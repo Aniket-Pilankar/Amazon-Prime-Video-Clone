@@ -49,7 +49,7 @@ const SIGNIN = () => {
             return
         }
 
-        navigate('/homepage')
+        navigate('/paymentCardPage')
 
 
         } catch (error) {

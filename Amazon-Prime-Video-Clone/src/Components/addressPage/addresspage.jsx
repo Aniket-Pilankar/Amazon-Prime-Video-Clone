@@ -2,6 +2,7 @@ import { useState } from "react"
 import cardlogo from "../../Images/black-prime-logo.jpeg"
 import axios from "axios"
 import "./add.css"
+import { Link } from "react-router-dom"
 
 export const Address=()=>{
 
@@ -42,7 +43,7 @@ export const Address=()=>{
        <>
             <div className="top">
             <div className="primelogo">
-            <img className="logomain"  src={cardlogo}></img>
+            {/* <img className="logomain"  src={cardlogo} sizes={'10px'}></img> */}
             <h3 className="headw">Watch now, cancel anytime</h3>
             <p className="textw">Start your 30-day free trial</p>
             </div>
@@ -76,7 +77,10 @@ export const Address=()=>{
 
             </div>
             <div className="conti">
-            <button className="continue">Continue</button> <br></br> 
+            <Link to={'/homepage'} >
+            <button className="continue">Continue</button>
+            </Link>
+             <br></br> 
             --------------Or---------------  
             <div className="end">
             Skip the free trial and buy a Prime membership without auto-renew. (All electronic payment methods eligible)

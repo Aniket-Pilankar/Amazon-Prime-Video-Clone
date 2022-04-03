@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"
+import { Link } from "react-router-dom"
 import img1 from "../../Images/logo_for_landing.png"
 import "./navforlanding.css"
 
@@ -62,7 +63,10 @@ export const NavbarForLanding = () => {
           <img src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/adult-1.png" style={{ width: "100%" }}></img>
         </div>
         <div className="username" onClick={() => { changedrop2() }}>
-          User...{drop2 ? <span class="material-icons-outlined">arrow_drop_down</span> : <span class="material-icons-outlined">arrow_drop_up</span>}
+          <Link to={'/signUp'}>
+            <span style={{color:'white',display:'inline-flex',justifyContent:'space-around'}}>Sign In</span>
+            </Link>
+          {drop2 ? <span class="material-icons-outlined">arrow_drop_down</span> : <span class="material-icons-outlined">arrow_drop_up</span>}
         </div>
       </div>
       <div className="drop2" style={{ display: drop ? "flex" : "none" }}>
