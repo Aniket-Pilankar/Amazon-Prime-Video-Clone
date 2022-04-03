@@ -94,11 +94,11 @@ const SignUp_Page = () => {
                     <label htmlFor="">Your name</label><br />
                     <input type="text" name="name" id="" onChange={handle_SignUpForm_Onchange} width='10px' /><br />
                     <label htmlFor="">Email</label><br />
-                    <input type="email" name="email" id="" onChange={handle_SignUpForm_Onchange} width='10px' /><br />
+                    <input type="text" name="email" id="" onChange={handle_SignUpForm_Onchange} width='10px' /><br />
                     <label htmlFor="">Password</label><br />
-                    <input type="password" name="password" id="" onChange={handle_SignUpForm_Onchange} width='10px' /><br />
+                    <input type="text" name="password" id="" onChange={handle_SignUpForm_Onchange} width='10px' /><br />
                     <label htmlFor="">Re-enter password</label><br />
-                    <input type="password" name="" id="" /><br />
+                    <input type="text" name="" id="" /><br />
                     <input type="submit" value={'Create Your Amazon Account'} className={'SignUp-Submit-Button'} />
                 </form>
                 <div className="signin_info">
