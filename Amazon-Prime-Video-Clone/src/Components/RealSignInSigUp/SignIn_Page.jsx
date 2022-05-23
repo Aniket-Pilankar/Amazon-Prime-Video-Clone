@@ -6,58 +6,58 @@ import { useNavigate } from "react-router-dom";
 
 const SIGNIN = () => {
 
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
-    const [SignInForm, setSignInForm] = useState({})
+  const [SignInForm, setSignInForm] = useState({})
 
-    const handle_SignUpForm_Onchange = (e) => {
-        const {value,name} = e.target
-        setSignInForm({
-            ...SignInForm,
-            [name]:value
-        })
-    }
+  const handle_SignUpForm_Onchange = (e) => {
+    const { value, name } = e.target
+    setSignInForm({
+      ...SignInForm,
+      [name]: value
+    })
+  }
 
-    const handle_SignUpForm_OnSubmit = (e) => {
-        e.preventDefault()
-        console.log(SignInForm);
-        let SgIndata = JSON.stringify(SignInForm)
-        postSignInData(SgIndata)
-    }
+  const handle_SignUpForm_OnSubmit = (e) => {
+    e.preventDefault()
+    console.log(SignInForm);
+    let SgIndata = JSON.stringify(SignInForm)
+    postSignInData(SgIndata)
+  }
 
-    const postSignInData = async (SgIndata) => {
-        try {
-            
-            let res = await fetch('https://desolate-woodland-56350.herokuapp.com/login',{
-            method:'POST',
-            body:SgIndata,
-            headers:{
-                'Content-Type':'application/json'
-            }
-        })
-        console.log('res:', res)
+  const postSignInData = async (SgIndata) => {
+    try {
 
-        let response = await res.json()
-        console.log('response:', response)
-
-        console.log('response.user:', response.user)
-        console.log('response.user:', response.token)
-
-
-        if(response.user === undefined){
-            alert('Please try another email or password')
-            return
+      let res = await fetch('https://desolate-woodland-56350.herokuapp.com/login', {
+        method: 'POST',
+        body: SgIndata,
+        headers: {
+          'Content-Type': 'application/json'
         }
+      })
+      console.log('res:', res)
 
-        // navigate('/paymentCardPage')
-        navigate('/homepage')
+      let response = await res.json()
+      console.log('response:', response)
+
+      console.log('response.user:', response.user)
+      console.log('response.user:', response.token)
 
 
-        } catch (error) {
-            console.log('error:', error)
-            
-        }
+      if (response.user === undefined) {
+        alert('Please try another email or password')
+        return
+      }
+
+      navigate('/paymentCardPage')
+      // navigate('/homepage')
+
+
+    } catch (error) {
+      console.log('error:', error)
+
     }
+  }
 
 
   return (
@@ -79,7 +79,7 @@ const SIGNIN = () => {
                 <input
                   type="email"
                   name="email"
-                  
+
                   id="email"
                   onChange={handle_SignUpForm_Onchange}
                 />
@@ -89,7 +89,7 @@ const SIGNIN = () => {
                 <input
                   type="password"
                   name="password"
-                  
+
                   id="password"
                   placeholder="At least 6 characters"
                   onChange={handle_SignUpForm_Onchange}
@@ -99,7 +99,7 @@ const SIGNIN = () => {
                 type="submit"
                 className="signin_btn"
               >
-                
+
               </input>
             </form>
           </div>
