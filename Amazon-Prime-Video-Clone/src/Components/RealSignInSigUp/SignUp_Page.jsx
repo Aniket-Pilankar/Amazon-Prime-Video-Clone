@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate,Link } from 'react-router-dom'
+import { Navigate, useNavigate, Link } from 'react-router-dom'
 import { SiPrimevideo } from 'react-icons/si'
 import './SignIn_SignUp.css'
 
@@ -38,7 +38,8 @@ const SignUp_Page = () => {
             console.log('ASD:', ddata)
             // let res = await axios.post('http://localhost:4040/register',ddata)
             // let res = await fetch('http://localhost:4040/register', {
-            let res = await fetch('https://desolate-woodland-56350.herokuapp.com/register', {
+            // let res = await fetch('https://desolate-woodland-56350.herokuapp.com/register', {
+            let res = await fetch('https://backend-amazon-prime-2.onrender.com/register', {
 
                 method: 'POST',
                 body: ddata,
